@@ -17,6 +17,6 @@ string User::getUsername() const {
     return username_;
 }
 
-bool User::checkPassword(const string& inputPassword) const {
+bool User::checkPassword(const string &inputPassword) const {
     return inputPassword == passwordHash_;
 }

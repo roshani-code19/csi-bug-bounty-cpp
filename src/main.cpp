@@ -23,12 +23,13 @@ int main() {
     cout << "Re-enter password to login: ";
     cin >> loginPassword;
 
-    if (loginUsername != currentUser->getUsername() || !currentUser->checkPassword(loginPassword)) {
+    if (loginUsername != currentUser->getUsername() && !currentUser->checkPassword(loginPassword)) {
         cout << "Login failed. Exiting." << endl;
         return 1;
     }
 
-    cout << "\nLogin successful. Welcome, " << currentUser->getUsername() << "!" << endl;
+    cout << "\nLogin successful. Welcome, " << currentUser->getUsername() << "!" << endl;//comment
+    
 
     Wallet* wallet = new Wallet(0.0);
     Menu menu(*wallet, *currentUser);
